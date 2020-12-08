@@ -1,0 +1,10 @@
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\bin\Debug\CC Compiler In WFA.exe.config
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\bin\Debug\CC Compiler In WFA.exe
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\bin\Debug\CC Compiler In WFA.pdb
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC Compiler In WFA.csprojAssemblyReference.cache
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC_Compiler_In_WFA.Form1.resources
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC_Compiler_In_WFA.Properties.Resources.resources
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC Compiler In WFA.csproj.GenerateResource.cache
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC Compiler In WFA.csproj.CoreCompileInputs.cache
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC Compiler In WFA.exe
+F:\PL Work\Document\Visual Studio 2019\Document\Assignment Sem6th\CC Compiler In WFA\obj\Debug\CC Compiler In WFA.pdb
