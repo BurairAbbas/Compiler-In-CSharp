@@ -33,7 +33,7 @@ namespace CC_Compiler_In_WFA
             Separator(code);
         }
 
-        // Used this method form Console. Change private into public and call it.
+        // Used this method from Console. Change private into public and call it.
         private void Generate_Token()
         {
             foreach (var temp in this.token)
