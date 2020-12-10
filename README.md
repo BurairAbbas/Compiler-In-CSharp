@@ -1,2 +1,3 @@
 # Compiler-In-C#
-Compiler is created in the Windows Form which just compile my own _SURB Language_.
+Compiler is created in the Windows Form C# which compile my own _SURB Language_.
+Compiler generate *Token* by analysis from **lexcial Analyser**. 
