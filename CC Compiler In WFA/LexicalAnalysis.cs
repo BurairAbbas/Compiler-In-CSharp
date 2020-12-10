@@ -21,11 +21,11 @@ namespace CC_Compiler_In_WFA
             }
         }
 
-        //public LexicalAnalysis(string path)
-        //{
-        //    token = new List<string>();
-        //    Separator(path);
-        //}
+        public LexicalAnalysis(string Filepath)
+        {
+           token = new List<string>();
+           FileReader(Filepath);
+        }
 
         public LexicalAnalysis(string[] code)
         {
@@ -42,35 +42,29 @@ namespace CC_Compiler_In_WFA
             }
         }
 
-
-        // If u want to read from textfile.
-
-        //private void Separator(string path)
-        //{
-        //    if (File.Exists(path))
-        //    {
-        //        string[] lineInTextFile = File.ReadAllLines(path);
-
-        //        //Same Code as below method....
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("File Not Found. Please check your file path.");
-        //    }
-        //}
+        private void FileReader(string Filepath)
+        {
+           if (File.Exists(Filepath))
+            {
+                string[] lineInTextFile = File.ReadAllLines(Filepath);
+                Separator(lineInTextFile);
+            }
+           else
+           {
+               Console.WriteLine("File Not Found. Please check your file path.");
+           }
+        }
 
         // Separator control the work follow!
         private void Separator(string[] code)
         {
-            string[] lineInTextFile = code;
-
             StringBuilder word = new StringBuilder();
             List<string> wordList = new List<string>();
 
-            this.words = new string[lineInTextFile.Length];
-            for (int i = 0; i < lineInTextFile.Length; i++)
+            this.words = new string[code.Length];
+            for (int i = 0; i < code.Length; i++)
             {
-                char[] characters = lineInTextFile[i].ToCharArray();
+                char[] characters = code[i].ToCharArray();
                 for (int j = 0; j < characters.Length; j++)
                 {
                     // Put any condition for word breaking here...
@@ -99,7 +93,7 @@ namespace CC_Compiler_In_WFA
                     }
                     else if (ch == '\"')
                     {
-                        string word2 = DoubleQuotation_Condition(lineInTextFile[i]);
+                        string word2 = DoubleQuotation_Condition(code[i]);
                         wordList.Add(word2);
                         // escape those character which is added in 'DQ' by adding their length 
                         // in index(j) of charArray
