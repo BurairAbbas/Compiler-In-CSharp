@@ -110,6 +110,11 @@ namespace CC_Compiler_In_WFA
                             word.Append(ch);
                         }
                     }
+                    else if (ch == '[' || ch == ']') 
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        wordList.Add(ch.ToString());
+                    }
                     else if (ch == '\"')
                     {
                         string word2 = DoubleQuotation_Condition(code[i]);
