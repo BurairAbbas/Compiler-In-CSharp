@@ -96,6 +96,20 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
+                    else if (ch == '.') 
+                    {
+                        string x = characters[j - 1].ToString();
+                        int value;
+                        if (!(int.TryParse(x, out value)))
+                        {
+                            AddWordInListAndClearIt(word, wordList);
+                            wordList.Add(ch.ToString());
+                        }
+                        else 
+                        {
+                            word.Append(ch);
+                        }
+                    }
                     else if (ch == '\"')
                     {
                         string word2 = DoubleQuotation_Condition(code[i]);
