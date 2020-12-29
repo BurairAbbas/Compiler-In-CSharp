@@ -1,0 +1,6 @@
+int a = 0;
+double dd = 5.5;
+str h = "Hello World";
+char ch = 'z';
+char ch2 = '\n';
+bool b = true;

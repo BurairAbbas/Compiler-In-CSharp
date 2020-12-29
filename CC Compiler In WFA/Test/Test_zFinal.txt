@@ -1,0 +1,14 @@
+b=new C("ABC","DEF",A,9,9.0e-9);
+int a =++c.d().g[a.b.c.g()["ABC"]++];
+float _9=this.r.ght("ABC","DEF",A,9,9.0e-9);
+string a9a9a9a9a9a9=99e-100;
+public class A extends B{
+public class C extends A{}
+}
+private A def(){
+return new B();
+}
+private A def(int a, A n){
+#a=r
+return B;
+}
