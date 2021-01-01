@@ -115,6 +115,11 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
+                    else if (ch == '{' || ch == '}')
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        wordList.Add(ch.ToString());
+                    }
                      else if (ch == ',')
                     {
                         AddWordInListAndClearIt(word, wordList);
