@@ -184,6 +184,11 @@ namespace CC_Compiler_In_WFA
                     {
                         token.Add(string.Format("({0}, {1}, {2})", GetKeyword(temp), temp, lineNumber));
                     }
+                    else if (IsAccessModifier(temp))
+                    {
+                        token.Add(string.Format("(Access Modifier, {0}, {1})", temp, lineNumber));
+
+                    }
                     else if (IsDataType(temp))
                     {
                         token.Add(string.Format("(DT, {0}, {1})", temp, lineNumber));
