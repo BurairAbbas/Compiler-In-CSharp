@@ -99,8 +99,8 @@ namespace CC_Compiler_In_WFA
                     else if (ch == '.') 
                     {
                         string x = characters[j - 1].ToString();
-                        int value;
-                        if (!(int.TryParse(x, out value)))
+                        int temp;
+                        if (!(int.TryParse(x, out temp)))
                         {
                             AddWordInListAndClearIt(word, wordList);
                             wordList.Add(ch.ToString());
