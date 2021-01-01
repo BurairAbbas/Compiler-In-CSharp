@@ -208,7 +208,7 @@ namespace CC_Compiler_In_WFA
                     // Integer
                     if (new Regex(@"^-?[0-9]{1,16}$").IsMatch(temp))
                         token.Add(string.Format("(int, {0}, {1})", temp, lineNumber));
-                    else if (new Regex(@"^-?[0-9]+(.[0-9]+)?$").IsMatch(temp)) // double
+                    else if (new Regex(@"^-?[0-9]+(.[0-9]+)?(e)?(-)?([0-9]+)?$").IsMatch(temp)) // double
                         token.Add(string.Format("(double, {0}, {1})", temp, lineNumber));
 
                 }
