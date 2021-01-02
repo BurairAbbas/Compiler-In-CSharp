@@ -277,6 +277,15 @@ namespace CC_Compiler_In_WFA
 
             return dt.Contains(temp);
         }
+        private bool IsAccessModifier(string temp) 
+        {
+            List<string> ac = new List<string>();
+            ac.Add("public");
+            ac.Add("private");
+            ac.Add("protected");
+
+            return ac.Contains(temp);
+        }
         private bool IsDigit(string temp)
         {
             return new Regex(@"^-?[0-9]+(.[0-9]+)?$").IsMatch(temp);
