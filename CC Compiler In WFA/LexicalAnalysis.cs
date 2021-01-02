@@ -288,7 +288,7 @@ namespace CC_Compiler_In_WFA
         }
         private bool IsDigit(string temp)
         {
-            return new Regex(@"^-?[0-9]+(.[0-9]+)?$").IsMatch(temp);
+            return new Regex(@"^-?[0-9]+(.[0-9]+)?(e)?(-)?([0-9]+)?$").IsMatch(temp);
         }
         private string GetOperator(string temp)
         {
