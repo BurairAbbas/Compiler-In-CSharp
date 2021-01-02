@@ -344,6 +344,7 @@ namespace CC_Compiler_In_WFA
             Dictionary<char, string> pc = new Dictionary<char, string>();
             pc.Add('?', "PC");
             pc.Add(';', "PC");
+            pc.Add(',', "PC");
             pc.Add(':', "PC");
             pc.Add('(', "PC");
             pc.Add(')', "PC");
