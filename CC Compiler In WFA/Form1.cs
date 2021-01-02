@@ -26,6 +26,6 @@ namespace CC_Compiler_In_WFA
             {
                 tokentb.Text += temp + "\r\n";
             }
-        }
+        }       
     }
 }

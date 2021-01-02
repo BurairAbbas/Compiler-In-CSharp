@@ -35,16 +35,16 @@
             // 
             // Codetb
             // 
-            this.Codetb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codetb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Codetb.Location = new System.Drawing.Point(30, 12);
             this.Codetb.Multiline = true;
             this.Codetb.Name = "Codetb";
-            this.Codetb.Size = new System.Drawing.Size(247, 426);
+            this.Codetb.Size = new System.Drawing.Size(401, 426);
             this.Codetb.TabIndex = 0;
             // 
             // GenerateToken
             // 
-            this.GenerateToken.Location = new System.Drawing.Point(312, 176);
+            this.GenerateToken.Location = new System.Drawing.Point(477, 189);
             this.GenerateToken.Name = "GenerateToken";
             this.GenerateToken.Size = new System.Drawing.Size(140, 51);
             this.GenerateToken.TabIndex = 1;
@@ -54,19 +54,19 @@
             // 
             // tokentb
             // 
-            this.tokentb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tokentb.Location = new System.Drawing.Point(503, 12);
+            this.tokentb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tokentb.Location = new System.Drawing.Point(659, 12);
             this.tokentb.Multiline = true;
             this.tokentb.Name = "tokentb";
             this.tokentb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tokentb.Size = new System.Drawing.Size(269, 426);
+            this.tokentb.Size = new System.Drawing.Size(403, 426);
             this.tokentb.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1074, 450);
             this.Controls.Add(this.tokentb);
             this.Controls.Add(this.GenerateToken);
             this.Controls.Add(this.Codetb);
