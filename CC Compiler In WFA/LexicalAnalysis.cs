@@ -127,7 +127,7 @@ namespace CC_Compiler_In_WFA
                     }
                     else if (ch == '\"')
                     {
-                        string word2 = DoubleQuotation_Condition(code[i]);
+                        string word2 = DoubleQuotation_Condition(code[i].Substring(j));
                         wordList.Add(word2);
                         // escape those character which is added in 'DQ' by adding their length 
                         // in index(j) of charArray
