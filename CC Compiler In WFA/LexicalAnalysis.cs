@@ -258,11 +258,17 @@ namespace CC_Compiler_In_WFA
             kw.Add("continue");
             kw.Add("print");
 
+             //Data Structure
+            kw.Add("ArrayList");
+
             //OOP
             kw.Add("new");
             kw.Add("class");
             kw.Add("abstract");
             kw.Add("static");
+            kw.Add("this");     
+            kw.Add("virtual");  
+            kw.Add("override"); 
 
             return kw.Contains(temp) ? kw[kw.IndexOf(temp)] : null;
         }
