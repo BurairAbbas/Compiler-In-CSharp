@@ -182,7 +182,13 @@ namespace CC_Compiler_In_WFA
                 {
                     if (GetKeyword(temp) != null)
                     {
-                        token.Add(string.Format("({0}, {1}, {2})", GetKeyword(temp), temp, lineNumber));
+                        if (GetKeyword(temp) == "virtual" || GetKeyword(temp) == "override")
+                        {
+                            token.Add(string.Format("(VO, {0}, {1})", temp, lineNumber));
+
+                        }
+                        else
+                            token.Add(string.Format("({0}, {1}, {2})", GetKeyword(temp), temp, lineNumber));
                     }
                     else if (IsAccessModifier(temp))
                     {
