@@ -105,11 +105,27 @@ namespace CC_Compiler_In_WFA
                             wordList.Add(ch.ToString());
                         }
                     }
-                    else if (ch == '-' && characters[j + 1] == '-') // For Decrement
+                    else if (ch == '-')
                     {
-                        AddWordInListAndClearIt(word, wordList);
-                        wordList.Add("--");
-                        j += 1;
+                        if (j + 1 < characters.Length) // For Decrement
+                        {
+                            if (characters[j + 1] == '-')
+                            {
+                                AddWordInListAndClearIt(word, wordList);
+                                wordList.Add("--");
+                                j += 1;
+                            }
+                            else
+                            {
+                                AddWordInListAndClearIt(word, wordList);
+                                wordList.Add(ch.ToString());
+                            }
+                        }
+                        else
+                        {
+                            AddWordInListAndClearIt(word, wordList);
+                            wordList.Add(ch.ToString());
+                        }
                     }
                     else if (ch == '=')
                     {
