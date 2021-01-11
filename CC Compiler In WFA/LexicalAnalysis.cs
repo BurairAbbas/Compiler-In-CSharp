@@ -197,18 +197,18 @@ namespace CC_Compiler_In_WFA
         }
         private string DoubleQuotation_Condition(string lineWithDQ)
         {
-            int openDQIndex = lineWithDQ.IndexOf('\"');
-            int closeDQIndex = lineWithDQ.IndexOf('\"', openDQIndex + 1);
-            string dqword = null;
-            if (closeDQIndex != -1)
+            StringBuilder word = new StringBuilder();
+            word.Append("\"");
+
+            for (int i = 1; i < lineWithDQ.Length; i++)
             {
-                dqword = lineWithDQ.Substring(openDQIndex, closeDQIndex - openDQIndex + 1);
+                word.Append(lineWithDQ[i].ToString());
+                if (lineWithDQ[i - 1] != '\\' && lineWithDQ[i] == '\"')
+                {
+                    break;
+                }
             }
-            else
-            {
-                dqword = lineWithDQ.Substring(openDQIndex);
-            }
-            return dqword;
+            return word.ToString();
         }
         private void Process_Word(string[] words, int lineNumber)
         {
