@@ -74,6 +74,10 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString()); // To Add ';' in list
                     }
+                    else if (j + 1 < characters.Length && ch == '/' && characters[j +1] == '/')
+                    {
+                        break;
+                    }
                     else if (ch == '(' || ch == ')')
                     {
                         AddWordInListAndClearIt(word, wordList);
