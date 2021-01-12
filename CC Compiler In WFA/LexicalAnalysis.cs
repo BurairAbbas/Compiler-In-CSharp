@@ -430,20 +430,20 @@ namespace CC_Compiler_In_WFA
         }
         private string GetPunctuator(string temp)
         {
-            Dictionary<char, string> pc = new Dictionary<char, string>();
-            pc.Add('?', "PC");
-            pc.Add(';', "PC");
-            pc.Add(',', "PC");
-            pc.Add(':', "PC");
-            pc.Add('(', "PC");
-            pc.Add(')', "PC");
-            pc.Add('.', "PC");
-            pc.Add('[', "PC");
-            pc.Add(']', "PC");
-            pc.Add('{', "PC");
-            pc.Add('}', "PC");
+            List<char> pc = new List<char>();
+            pc.Add('?');
+            pc.Add(';');
+            pc.Add(',');
+            pc.Add(':');
+            pc.Add('(');
+            pc.Add(')');
+            pc.Add('.');
+            pc.Add('[');
+            pc.Add(']');
+            pc.Add('{');
+            pc.Add('}');
 
-            return pc.ContainsKey(Convert.ToChar(temp)) ? pc[Convert.ToChar(temp)] : null;
+            return pc.Contains(Convert.ToChar(temp)) ? temp : null;
         }
     }
 }
