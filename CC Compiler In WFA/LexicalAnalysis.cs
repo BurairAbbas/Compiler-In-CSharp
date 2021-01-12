@@ -93,6 +93,13 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
+                    else if (j + 1 < characters.Length && IsCompoundOperator(ch, characters[j + 1]))
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        string op = ch.ToString() + characters[j + 1].ToString();
+                        wordList.Add(op);
+                        j += 1;
+                    }
                     else if (ch == '+')
                     {
                         if (j + 1 < characters.Length) // For Increment
