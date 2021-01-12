@@ -207,6 +207,23 @@ namespace CC_Compiler_In_WFA
                 wordList.Add(word.ToString());
             word.Clear();
         }
+        private bool IsCompoundOperator(char operator1, char operator2)
+        {
+            ArrayList cp = new ArrayList()
+            { '<', '>', '=', '!', '+', '-', '*', '/', '%' };
+
+            if (cp.Contains(operator1))
+            {
+                if (operator2 == '=')
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            return false;
+        }
         private string DoubleQuotation_Condition(string lineWithDQ)
         {
             StringBuilder word = new StringBuilder();
