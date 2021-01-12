@@ -352,7 +352,7 @@ namespace CC_Compiler_In_WFA
             kw.Add("virtual");  
             kw.Add("override"); 
 
-            return kw.Contains(temp) ? kw[kw.IndexOf(temp)] : null;
+            return kw.Contains(temp) ? temp : null;
         }
         private bool IsDataType(string temp)
         {
@@ -405,6 +405,7 @@ namespace CC_Compiler_In_WFA
             op.Add("=", "AO");
             op.Add("+=", "AO");
             op.Add("-=", "AO");
+            op.Add("*=", "AO");
             op.Add("/=", "AO");
             op.Add("%=", "AO");
 
