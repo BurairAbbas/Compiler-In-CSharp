@@ -224,6 +224,17 @@ namespace CC_Compiler_In_WFA
 
             return false;
         }
+        private bool IsOperator(char op)
+        {
+            ArrayList cp = new ArrayList()
+            { '<', '>', '=','!', '*', '/', '%' };
+
+            if (cp.Contains(op))
+            {
+                return true;
+            }
+            return false;
+        }
         private string DoubleQuotation_Condition(string lineWithDQ)
         {
             StringBuilder word = new StringBuilder();
