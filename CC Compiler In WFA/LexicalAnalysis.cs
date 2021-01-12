@@ -417,7 +417,7 @@ namespace CC_Compiler_In_WFA
         }
         public string GetValueDT(string temp)
         {
-            if (new Regex("^\"[\\s\\w.]*\"$").IsMatch(temp))
+            if (new Regex("^\"[\\s\\w.\\W]*\"$").IsMatch(temp))
             {
                 return "str";
             }
