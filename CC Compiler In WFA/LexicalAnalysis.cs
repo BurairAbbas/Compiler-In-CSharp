@@ -83,6 +83,16 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
+                    else if (ch == '[' || ch == ']') 
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        wordList.Add(ch.ToString());
+                    }
+                    else if (ch == '{' || ch == '}')
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        wordList.Add(ch.ToString());
+                    }
                     else if (ch == '+')
                     {
                         if (j + 1 < characters.Length) // For Increment
@@ -145,17 +155,7 @@ namespace CC_Compiler_In_WFA
                         {
                             word.Append(ch);
                         }
-                    }
-                    else if (ch == '[' || ch == ']') 
-                    {
-                        AddWordInListAndClearIt(word, wordList);
-                        wordList.Add(ch.ToString());
-                    }
-                    else if (ch == '{' || ch == '}')
-                    {
-                        AddWordInListAndClearIt(word, wordList);
-                        wordList.Add(ch.ToString());
-                    }
+                    }                    
                      else if (ch == ',')
                     {
                         AddWordInListAndClearIt(word, wordList);
