@@ -100,6 +100,11 @@ namespace CC_Compiler_In_WFA
                         wordList.Add(op);
                         j += 1;
                     }
+                    else if (IsOperator(ch))
+                    {
+                        AddWordInListAndClearIt(word, wordList);
+                        wordList.Add(ch.ToString());
+                    }
                     else if (ch == '+')
                     {
                         if (j + 1 < characters.Length) // For Increment
