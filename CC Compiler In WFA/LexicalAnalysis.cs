@@ -74,9 +74,27 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString()); // To Add ';' in list
                     }
-                    else if (j + 1 < characters.Length && ch == '/' && characters[j +1] == '/')
+                    // handle comment
+                    else if (j + 1 < characters.Length && ch == '/')
                     {
-                        break;
+                        // Handle single line comment
+                        if (characters[j + 1] == '/')
+                        {
+                            break;
+                        }
+                        // multiple line comment
+                        else if (characters[j + 1] == '*')
+                        {
+                            int closingIndexOfMulComment = code[i].IndexOf("*/");
+                            while (closingIndexOfMulComment == -1)
+                            {
+                                i++;
+                                closingIndexOfMulComment = code[i].IndexOf("*/");
+                            }
+                            break;
+                        }
+                        // Add ch in word if its not any of above comment
+                        word.Append(ch);
                     }
                     else if (ch == '(' || ch == ')')
                     {
