@@ -1,0 +1,8 @@
+// asdasd
+i++
+
+// multiply line comment
+a = "123"; /*sadqw*/
+/*qwe
+aaf
+wq */
