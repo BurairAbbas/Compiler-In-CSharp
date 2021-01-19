@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Collections;
 
 namespace CC_Compiler_In_WFA
 {
@@ -125,6 +126,10 @@ namespace CC_Compiler_In_WFA
                     }
                     else if (ch == '+')
                     {
+                        if (j - 1 != -1 && characters[j - 1] == 'e')
+                        {
+                            word.Append(ch.ToString());
+                        }
                         if (j + 1 < characters.Length) // For Increment
                         {
                             if (characters[j + 1] == '+')
@@ -147,6 +152,10 @@ namespace CC_Compiler_In_WFA
                     }
                     else if (ch == '-')
                     {
+                        if (j - 1 != -1 && characters[j - 1] == 'e')
+                        {
+                            word.Append(ch.ToString());
+                        }
                         if (j + 1 < characters.Length) // For Decrement
                         {
                             if (characters[j + 1] == '-')

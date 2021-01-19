@@ -6,3 +6,4 @@ a = "123"; /*sadqw*/
 /*qwe
 aaf
 wq */
+str = "qwe"
