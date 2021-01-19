@@ -426,10 +426,24 @@ namespace CC_Compiler_In_WFA
             }
             else if (new Regex("^'.{1,2}'$").IsMatch(temp))
             {
-                return "char";
-            }
-            else
+                if (IsCharCorrect(temp))
+                {
+                    return "char";
+                }
                 return null;
+            }
+            return null;
+        }
+         private bool IsCharCorrect(string temp)
+        {
+            if (temp.Length == 3)
+                return true;
+
+            // Add any character constant 
+            List<string> ch = new List<string> { "'\\n'", "'\\a'", "'\\b'", "'\\f'",
+                 "'\\r'", "'\\t'", "'\\v'", "'\\\\'", "'\\''", "'\\?'" };
+
+            return ch.Contains(temp);
         }
         private string GetPunctuator(string temp)
         {
