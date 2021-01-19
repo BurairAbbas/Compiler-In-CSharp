@@ -24,8 +24,8 @@ namespace CC_Compiler_In_WFA
 
         public LexicalAnalysis(string Filepath)
         {
-           token = new List<string>();
-           FileReader(Filepath);
+            token = new List<string>();
+            FileReader(Filepath);
         }
 
         public LexicalAnalysis(string[] code)
@@ -45,15 +45,15 @@ namespace CC_Compiler_In_WFA
 
         private void FileReader(string Filepath)
         {
-           if (File.Exists(Filepath))
+            if (File.Exists(Filepath))
             {
                 string[] lineInTextFile = File.ReadAllLines(Filepath);
                 Separator(lineInTextFile);
             }
-           else
-           {
-               Console.WriteLine("File Not Found. Please check your file path.");
-           }
+            else
+            {
+                Console.WriteLine("File Not Found. Please check your file path.");
+            }
         }
 
         // Separator control the work follow!
@@ -102,7 +102,7 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
-                    else if (ch == '[' || ch == ']') 
+                    else if (ch == '[' || ch == ']')
                     {
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
@@ -130,7 +130,7 @@ namespace CC_Compiler_In_WFA
                         {
                             word.Append(ch.ToString());
                         }
-                        if (j + 1 < characters.Length) // For Increment
+                        else if (j + 1 < characters.Length) // For Increment
                         {
                             if (characters[j + 1] == '+')
                             {
@@ -156,7 +156,7 @@ namespace CC_Compiler_In_WFA
                         {
                             word.Append(ch.ToString());
                         }
-                        if (j + 1 < characters.Length) // For Decrement
+                        else if (j + 1 < characters.Length) // For Decrement
                         {
                             if (characters[j + 1] == '-')
                             {
@@ -181,7 +181,7 @@ namespace CC_Compiler_In_WFA
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
                     }
-                    else if (ch == '.') 
+                    else if (ch == '.')
                     {
                         string x = characters[j - 1].ToString();
                         int temp;
@@ -190,12 +190,12 @@ namespace CC_Compiler_In_WFA
                             AddWordInListAndClearIt(word, wordList);
                             wordList.Add(ch.ToString());
                         }
-                        else 
+                        else
                         {
                             word.Append(ch);
                         }
-                    }                    
-                     else if (ch == ',')
+                    }
+                    else if (ch == ',')
                     {
                         AddWordInListAndClearIt(word, wordList);
                         wordList.Add(ch.ToString());
@@ -206,7 +206,7 @@ namespace CC_Compiler_In_WFA
                         wordList.Add(word2);
                         // escape those character which is added in 'DQ' by adding their length 
                         // in index(j) of charArray
-                        j += word2.Length - 1;                        
+                        j += word2.Length - 1;
                     }
                     else if (ch != ' ')
                     {
@@ -367,7 +367,7 @@ namespace CC_Compiler_In_WFA
             kw.Add("continue");
             kw.Add("print");
 
-             //Data Structure
+            //Data Structure
             kw.Add("ArrayList");
 
             //OOP
@@ -375,9 +375,9 @@ namespace CC_Compiler_In_WFA
             kw.Add("class");
             kw.Add("abstract");
             kw.Add("static");
-            kw.Add("this");     
-            kw.Add("virtual");  
-            kw.Add("override"); 
+            kw.Add("this");
+            kw.Add("virtual");
+            kw.Add("override");
 
             return kw.Contains(temp) ? temp : null;
         }
@@ -392,7 +392,7 @@ namespace CC_Compiler_In_WFA
 
             return dt.Contains(temp);
         }
-        private bool IsAccessModifier(string temp) 
+        private bool IsAccessModifier(string temp)
         {
             List<string> ac = new List<string>();
             ac.Add("public");
@@ -427,7 +427,7 @@ namespace CC_Compiler_In_WFA
             op.Add("&&", "LO");
             op.Add("||", "LO");
 
-             // Unary Operator
+            // Unary Operator
             op.Add("!", "UO");
 
 
@@ -461,7 +461,7 @@ namespace CC_Compiler_In_WFA
             }
             return null;
         }
-         private bool IsCharCorrect(string temp)
+        private bool IsCharCorrect(string temp)
         {
             if (temp.Length == 3)
                 return true;
