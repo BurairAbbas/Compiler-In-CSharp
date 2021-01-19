@@ -33,7 +33,7 @@ namespace CC_Compiler_In_WFA
             Separator(code);
         }
 
-        // Used this method from Console. Change private into public and call it.
+        // Used this method from Console Application. Change private into public and call it.
         private void Generate_Token()
         {
             foreach (var temp in this.token)
@@ -399,6 +399,9 @@ namespace CC_Compiler_In_WFA
             //Logical Operator
             op.Add("&&", "LO");
             op.Add("||", "LO");
+
+             // Unary Operator
+            op.Add("!", "UO");
 
 
             //Assignment Operator
