@@ -440,8 +440,8 @@ namespace CC_Compiler_In_WFA
             op.Add("%=", "AO");
 
             // Increment and Decrement
-            op.Add("++", "ic");
-            op.Add("--", "dc");
+            op.Add("++", "inc-dec");
+            op.Add("--", "inc-dec");
 
             return op.ContainsKey(temp) ? op[temp] : null;
         }
