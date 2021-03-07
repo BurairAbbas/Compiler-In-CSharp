@@ -305,7 +305,7 @@ namespace CC_Compiler_In_WFA
                     // Bool condition here. So, boolean not take as ID
                     else if (new Regex("^(true|false)$", RegexOptions.IgnoreCase).IsMatch(temp))
                     {
-                        token.Add(string.Format("(bool, {0}, {1})", temp, lineNumber));
+                        token.Add(string.Format("(bool-const, {0}, {1})", temp, lineNumber));
                     }
                     else
                     {
@@ -316,9 +316,9 @@ namespace CC_Compiler_In_WFA
                 {
                     // Integer
                     if (new Regex(@"^-?[0-9]{1,16}$").IsMatch(temp))
-                        token.Add(string.Format("(int, {0}, {1})", temp, lineNumber));
+                        token.Add(string.Format("(int-const, {0}, {1})", temp, lineNumber));
                     else if (new Regex(@"^-?[0-9]+(.[0-9]+)?(e)?(-)?([0-9]+)?$").IsMatch(temp)) // double
-                        token.Add(string.Format("(double, {0}, {1})", temp, lineNumber));
+                        token.Add(string.Format("(double-const, {0}, {1})", temp, lineNumber));
 
                 }
                 else if (GetOperator(temp) != null)
@@ -449,13 +449,13 @@ namespace CC_Compiler_In_WFA
         {
             if (new Regex("^\"[\\s\\w.\\W]*\"$").IsMatch(temp))
             {
-                return "str";
+                return "str-const";
             }
             else if (new Regex("^'.{1,2}'$").IsMatch(temp))
             {
                 if (IsCharCorrect(temp))
                 {
-                    return "char";
+                    return "char-const";
                 }
                 return null;
             }
