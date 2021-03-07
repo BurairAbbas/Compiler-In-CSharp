@@ -424,15 +424,15 @@ namespace CC_Compiler_In_WFA
             op.Add("!=", "RO");
 
             //Logical Operator
-            op.Add("&&", "LO");
-            op.Add("||", "LO");
+            op.Add("&&", "&&");
+            op.Add("||", "||");
 
             // Unary Operator
-            op.Add("!", "UO");
+            op.Add("!", "!");
 
 
             //Assignment Operator
-            op.Add("=", "AO");
+            op.Add("=", "=");
             op.Add("+=", "AO");
             op.Add("-=", "AO");
             op.Add("*=", "AO");
