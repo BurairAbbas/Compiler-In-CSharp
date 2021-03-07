@@ -19,13 +19,19 @@ namespace CC_Compiler_In_WFA
 
         private void GenerateToken_Click(object sender, EventArgs e)
         {
+
             tokentb.Text = string.Empty;
+            Syntaxtb.Text = string.Empty;
             string[] code = Codetb.Lines;
             LexicalAnalysis la = new LexicalAnalysis(code);
             foreach (var temp in la.GetToken)
             {
                 tokentb.Text += temp + "\r\n";
             }
-        }       
+
+            SyntaxAnalyzer sn = new SyntaxAnalyzer(code);
+            Syntaxtb.Text += sn.CheckSyntax();
+
+        }
     }
 }
