@@ -150,6 +150,7 @@ namespace CC_Compiler_In_WFA
                             wordList.Add(ch.ToString());
                         }
                     }
+                    // error:e-10 in double
                     else if (ch == '-')
                     {
                         if (j - 1 != -1 && characters[j - 1] == 'e')
@@ -409,11 +410,11 @@ namespace CC_Compiler_In_WFA
         {
             Dictionary<string, string> op = new Dictionary<string, string>();
             // Arithematics Operator
-            op.Add("+", "AM");
-            op.Add("-", "AM");
-            op.Add("*", "AM");
-            op.Add("/", "AM");
-            op.Add("%", "AM");
+            op.Add("+", "PM");
+            op.Add("-", "PM");
+            op.Add("*", "MDM");
+            op.Add("/", "MDM");
+            op.Add("%", "MDM");
 
             // Rational Operators
             op.Add("<", "RO");
